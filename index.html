@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('dorab.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+#dora
+{
+width:100px;
+position:absolute;
+top:280px;
+left:280px;
+}
+#nari
+{
+
+position:absolute;
+top:410px;
+left:1110px;
+
+}
+#benny
+{
+position:absolute;
+top:420px;
+left:670px;
+
+}
+#snail
+{
+
+position:absolute;
+top:395px;
+left:880px;
+
+}
+#grass
+{
+position:absolute;
+top:370px;
+left:0px;
+
+}
+#box
+{
+width :100%;
+height:60px;
+top:0px;
+position:absolute;
+}
+body {
+  font-family: Georgia, serif;
+}
+</style>
+<script>
+var c=1;
+function start()
+{
+
+document.getElementById("nari").addEventListener("mouseover",yes,false);
+document.getElementById("snail").addEventListener("mouseover",no,false);
+document.getElementById("snail").addEventListener("mouseout",out,false);
+document.getElementById("benny").addEventListener("mouseover",no,false);
+document.getElementById("benny").addEventListener("mouseout",out,false);
+document.getElementById("grass").addEventListener("mouseover",no,false);
+document.getElementById("grass").addEventListener("mouseout",out,false);
+
+document.getElementById("nari").addEventListener("click",lock,false);
+}
+function yes()
+{
+document.getElementById("box").innerHTML="Hurray!!&#128077 You found it ,Lock him...";
+document.getElementById("box").style.fontSize = "40px";
+
+
+}
+function out()
+{
+document.getElementById("box").innerHTML="Quick &#8987 find him out...";
+document.getElementById("box").style.fontSize = "40px";
+
+
+}
+function lock()
+{
+document.getElementById("box").innerHTML="Kudous &#128151...Thank you for help me to find him";
+window.alert("You found him in "+c+" attempt");
+
+}
+function no()
+{
+document.getElementById("box").innerHTML="Oops &#128532;...No that is not him."
+document.getElementById("box").style.fontSize = "40px";
+c=c+1;
+}
+window.addEventListener("load",start,false)
+</script>
+</head>
+<body >
+<div id="total">
+<div style="background-color:orange;  text-align:center;" id="box"><h1 id="text">&#129309;Help Dora to find the Fox!!</h1></div>
+<center><div id="dora"><img src="newdora2.png" ></div></center>
+<div id="snail"><img src="snail.png" width="200px;"/></div>
+<div id="benny"><img src="benny1.png" width="100px;"/></div>
+<div id="grass"><img src="green2.png" width="200px;"/></div>
+<div id="nari"><img src="y.png" width="300px;"/></div>
+</div>
+</body>
+</html>
